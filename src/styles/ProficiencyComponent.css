@@ -1,0 +1,117 @@
+/* Container for the entire proficiency component */
+.proficiency-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  height: calc(85vh - 80px);
+}
+
+/* When the proficiency container is in view, make it visible */
+.proficiency-container.visible {
+  opacity: 1;
+}
+
+/* Heading for the section */
+.proficiency-container h2 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 10px;
+}
+
+/* Container for all skills */
+.skills-list {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Each skill block */
+.skill {
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+
+/* Skill name and level percentage */
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Styling for the skill name and level */
+.skill-name h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.skill-name span {
+  font-size: 16px;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Container for the progress bar */
+.progress-bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress bar filling animation */
+.progress-bar {
+  height: 100%;
+  background-color: #007BFF;
+  border-radius: 8px;
+  width: 0;
+  transition: width 2s ease-in-out;
+}
+
+/* Add a soft hover effect on the entire container */
+.proficiency-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .proficiency-container {
+    padding: 30px;
+    margin: 20px;
+    height: 80vh;
+  }
+
+  .skills-list {
+    padding: 0;
+  }
+}

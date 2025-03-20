@@ -1,14 +1,16 @@
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(90vh - 80px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 2rem;
   padding: 0 20px;
+  
 }
 
 .hero-content {
   flex: 1;
+  margin-left: 7vw;
 }
 
 .hero-content h1 {
@@ -37,6 +39,10 @@
   align-items: center;
 }
 
+.cta-buttons .primary-button:hover{
+  background-color: black;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
@@ -61,6 +67,7 @@
   border-radius: 15px;
   overflow: hidden;
   padding: 20px;
+  margin-right: 5vw;
 }
 
 .hero-image img {
@@ -77,6 +84,8 @@
   transform: scale(1.1);
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
+
+
 
 @media (max-width: 768px) {
   .hero-image {
