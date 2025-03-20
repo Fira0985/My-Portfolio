@@ -1,8 +1,12 @@
-import { BookOpen, GraduationCap } from 'lucide-react';
-import React from 'react';
-import '../styles/Education.css';
+import { BookOpen, GraduationCap } from "lucide-react";
+import React, { useState } from "react";
+import Omishtu from '../assets/cert.jpg';
+import ProgrammingFundamental from '../assets/programming.png';
+import "../styles/Education.css";
 
 function Education() {
+  const [selectedDocument, setSelectedDocument] = useState(null);
+
   const educationInfo = {
     display: true, // Set false to hide this section, defaults to true
     schools: [
@@ -14,24 +18,45 @@ function Education() {
         descBullets: [
           "Developed a web application as part of a capstone project.",
           "Maintained a GPA of 3.93, showcasing strong problem-solving and analytical skills.",
-          "Studied courses including Software Engineering Principles, Data Structures, Web Development, and Network Security."
-        ]
+          "Studied courses including Software Engineering Principles, Data Structures, Web Development, and Network Security.",
+        ],
+        document: {
+          image: "path-to-your-image.jpg", // Replace with actual image path
+          description: "This is an academic transcript from Haramaya University.",
+        },
       },
-
+      {
+        schoolName: "Udacity (GC - Ethiopia & Accenture)",
+        subHeader: "Programming Fundamentals Nanodegree",
+        duration: "November 27, 2024",
+        desc: "Completed Udacity's Programming Fundamentals Nanodegree, earning a verified certificate through GC - Ethiopia and Accenture.",
+        descBullets: [
+          "Acquired foundational programming skills.",
+          "Confirmed by Udacity: [View Certificate](https://www.udacity.com/certificate/e/8aa5a66c-ac33-11ef-95e5-afd65eb85f4c)",
+        ],
+        document: {
+          image: ProgrammingFundamental,
+          description: "This is the certificate from Udacity.",
+        },
+      },
       {
         schoolName: "Omishtu-Joy Tech Solution",
         subHeader: "MERN Stack Course",
         duration: "June 2024 - August 2024",
-        desc: "Earned a 2-month Full Stack Web Development (MERN) certification from Omishtu-Joy Tech Solutions (June–August 2024). Gained expertise in front-end and back-end development, version control, testing, debugging, database management, data modeling, and using modern frameworks and libraries. Demonstrated proficiency in building dynamic, scalable web applications, showcasing strong practical skills in the MERN stack (MongoDB, Express.js, React, and Node.js).",
+        desc: "Earned a 2-month Full Stack Web Development (MERN) certification from Omishtu-Joy Tech Solutions.",
         descBullets: [
           "Developed a full stack web application.",
-          "Studied courses including fronted, backend, version control, and database management(MongoDB)."
-        ]
+          "Studied courses including front-end, back-end, version control, and database management (MongoDB).",
+        ],
+        document: {
+          image: Omishtu,
+          description: "This is the certification from Omishtu-Joy Tech Solution.",
+        },
       }
-    ]
+    ],
   };
 
-  if (!educationInfo.display) return null; // Hide if display is false
+  if (!educationInfo.display) return null;
 
   return (
     <section id="education" className="education">
@@ -40,7 +65,6 @@ function Education() {
         {educationInfo.schools.map((school, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-icon">
-              {/* You can choose appropriate icons for each school or course */}
               {index === 0 ? <GraduationCap size={24} /> : <BookOpen size={24} />}
             </div>
             <div className="timeline-content">
@@ -53,10 +77,29 @@ function Education() {
                   <li key={bulletIndex}>{bullet}</li>
                 ))}
               </ul>
+              <button
+                className="see-document-button"
+                onClick={() => setSelectedDocument(school.document)}
+              >
+                See Document
+              </button>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Popup for displaying document */}
+      {selectedDocument && (
+        <div className="document-popup">
+          <div className="document-content">
+            <span className="close-button" onClick={() => setSelectedDocument(null)}>
+              &times;
+            </span>
+            <img src={selectedDocument.image} alt="Document" />
+            <p>{selectedDocument.description}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

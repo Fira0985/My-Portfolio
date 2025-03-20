@@ -135,6 +135,63 @@
   top: 2px;
 }
 
+.see-document-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.see-document-button:hover {
+  background-color: black;
+}
+
+/* Popup Styles */
+.document-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.document-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+}
+
+.close-button:hover {
+  color: brown;
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .education{
@@ -152,5 +209,9 @@
 
   .timeline-icon {
     left: 0;
+  }
+
+  .document-content {
+    width: 80vw;
   }
 }

@@ -1,19 +1,15 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import {
   Braces,
-  Brush,
   Cloud,
   Code2,
   Database,
   FileCode,
   FlaskConical,
   GitBranch,
-  Layers,
   Layout,
-  Ruler,
   Server,
-  ShieldCheck,
-  Terminal,
+  ShieldCheck
 } from "lucide-react";
 import React, { useRef } from "react";
 import "../styles/Skills.css";
@@ -23,20 +19,15 @@ const skills = [
   { name: "JavaScript", icon: Braces },
   { name: "HTML5", icon: FileCode },
   { name: "CSS3", icon: Layout },
-  { name: "TypeScript", icon: Terminal },
   { name: "Node.js", icon: Server },
   { name: "Python", icon: FlaskConical },
   { name: "SQL", icon: Database },
   { name: "MongoDB", icon: Database },
   { name: "REST APIs", icon: Server },
-  { name: "Figma", icon: Brush },
-  { name: "Adobe XD", icon: Ruler },
   { name: "Responsive Design", icon: Layout },
   { name: "User Research", icon: ShieldCheck },
   { name: "Git", icon: GitBranch },
-  { name: "Docker", icon: Layers },
   { name: "AWS", icon: Cloud },
-  { name: "Agile", icon: ShieldCheck },
   { name: "Testing", icon: ShieldCheck },
 ];
 

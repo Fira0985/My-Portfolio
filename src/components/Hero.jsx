@@ -45,9 +45,9 @@ function Hero() {
                 View My Work
               </a>
               <div className="social-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer"><Github /></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
-                <a href="mailto:contact@example.com"><Mail /></a>
+                <a href="https://github.com/Fira0985" target="_blank" rel="noopener noreferrer"><Github /></a>
+                <a href="https://www.linkedin.com/in/firafis-berhanu-89345a327/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+                <a href="mailto:firafisberhanu4@gmail.com"><Mail /></a>
               </div>
             </div>
           </div>
