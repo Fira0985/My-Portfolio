@@ -21,7 +21,7 @@ const bigProjects = {
       projectName: "Tasky App",
       projectDesc: "Tasky is a simple and intuitive task management app designed to help users organize, prioritize, and complete tasks efficiently. The app is perfect for those looking to manage their time and boost productivity. Note: Tasky is still in development.",
       footerLink: [
-        { name: "Visit Website", url: "https://tasky-drab.vercel.app/" },
+        { name: "Visit Website", url: "https://tasky-app-frontend.vercel.app/" },
         { name: "View on GitHub", url: "https://github.com/Fira0985/Tasky-app" }
       ]
     },
